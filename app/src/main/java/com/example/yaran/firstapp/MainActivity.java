@@ -14,11 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void sign_up_view(View view){
-    /*    Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);*/
+        Intent intent = new Intent(this, register_activity.class);
+        startActivity(intent);
 
     }
 }
