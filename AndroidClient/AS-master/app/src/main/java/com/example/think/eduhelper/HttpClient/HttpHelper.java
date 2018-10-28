@@ -1,5 +1,6 @@
 package com.example.think.eduhelper.HttpClient;
 import android.drm.DrmStore;
+import android.util.Log;
 
 import org.json.JSONObject;
 
@@ -32,34 +33,34 @@ public class HttpHelper {
     // TO DO change the url here
     private String Url = "https://postman-echo.com/get?foo1=bar1&foo2=bar2'";
 
-    public void getData(final HttpCallback getCallback) {
-        Request request = new Request.Builder()
-                .url(Url)
-                .build();
-        Client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    if (!response.isSuccessful())
-                        throw new IOException("Unexpected code " + response);
-
-                    String data = responseBody.string();
-                    getCallback.getDataCallback(data);
-                }
-            }
-        });
-    }
-    public void postData(JSONObject parameter) {
+//    public void getData(final HttpCallback getCallback) {
+//        Request request = new Request.Builder()
+//                .url(Url)
+//                .build();
+//        Client.newCall(request).enqueue(new Callback() {
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//                try (ResponseBody responseBody = response.body()) {
+//                    if (!response.isSuccessful())
+//                        throw new IOException("Unexpected code " + response);
+//
+//                    String data = responseBody.string();
+//                    getCallback.getDataCallback(data);
+//                }
+//            }
+//        });
+//    }
+    public void postData(JSONObject parameter, String address) {
         MediaType JSON = MediaType.parse("application/json; charset=utf-8");
         RequestBody body = RequestBody.create(JSON, parameter.toString());
         //TO DO The URL need to be changed!
         Request request = new Request.Builder()
-                .url("http://192.168.0.16:5000/register")
+                .url("http://192.168.5.4:5000/"+address)
                 .post(body)
                 .addHeader("content-type", "application/json; charset=utf-8")
                 .build();
@@ -78,7 +79,7 @@ public class HttpHelper {
                 if (!response.isSuccessful()) {
                     throw new IOException("Unexpected code" + response.body().string());
                 } else {
-                    System.out.println(response.body().string());
+                    Log.d("response",response.body().string());
                 }
             }
         });
