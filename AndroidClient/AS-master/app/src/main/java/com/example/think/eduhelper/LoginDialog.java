@@ -15,9 +15,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.think.eduhelper.HttpClient.HttpHelper;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.util.Log;
 
 import com.example.think.eduhelper.UserLoginDB.User;
 
+import org.json.JSONObject;
 import java.util.List;
 
 public class LoginDialog extends DialogFragment {
@@ -36,13 +43,18 @@ public class LoginDialog extends DialogFragment {
                 Dialog dialogView = (Dialog) dialog;
                 name = dialogView.findViewById(R.id.editText_LoginName);
                 password = dialogView.findViewById(R.id.editText_LoginPassword);
-                if(ifMatch(name.getText().toString(), password.getText().toString())){
-                    startActivity(new Intent(getContext(),AccountPage.class));
-                    Toast.makeText(getActivity(),"Login successfully!", Toast.LENGTH_SHORT).show();
+                String userName = name.getText().toString();
+                String userPassword = password.getText().toString();
 
-                }else{
-                    Toast.makeText(getActivity(),"User and password don't match!", Toast.LENGTH_SHORT).show();
-                }
+                Log.d("name",name.getText().toString());
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("userName", userName);
+                params.put("userPassword", userPassword);
+                JSONObject parameter = new JSONObject((params));
+                //Start OKHTTP REQUEST
+                HttpHelper.getInstance().postData(parameter,"login");
+                name.setText("");
+                password.setText("");
 
             }
         });
