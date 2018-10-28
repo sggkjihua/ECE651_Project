@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="USER"
+        android:title="USER">
+        <EditTextPreference
+            android:icon="@mipmap/ic_launcher"
+            android:key="edit_text_name"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="Setting your name here"
+            android:title="User Name" />
+
+        <EditTextPreference
+            android:icon="@mipmap/ic_launcher"
+            android:key="email"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="Setting your Email here"
+            android:title="E-Mail" />
+
+        <ListPreference
+            android:icon="@drawable/login_dialog"
+            android:title="Gender"
+            android:key = "gender"
+            android:entries="@array/gender"
+            android:entryValues="@array/gender"
+            />
+
+
+        <ListPreference
+            android:icon="@drawable/login_dialog"
+            android:title="Nationality"
+            android:key = "nationality"
+            android:entries="@array/nationalities"
+            android:entryValues="@array/nationalities"
+             />
+    </PreferenceCategory>
+    <PreferenceCategory
+            android:key="Academic"
+            android:title="Academic Background">
+            <ListPreference
+                android:icon="@drawable/login_dialog"
+                android:title="Major"
+                android:key = "major"
+                android:entries="@array/subjects"
+                android:entryValues="@array/subjects"
+                />
+
+            <ListPreference
+                android:icon="@drawable/login_dialog"
+                android:title="Degree"
+                android:key = "degree"
+                android:entries="@array/degree"
+                android:entryValues="@array/degree"
+                />
+
+            <MultiSelectListPreference
+                android:icon="@drawable/login_dialog"
+                android:title="University"
+                android:key = "University"
+                android:entries="@array/Schools"
+                android:entryValues="@array/Schools"
+                ></MultiSelectListPreference>
+
+        <MultiSelectListPreference
+            android:icon="@drawable/login_dialog"
+            android:title="Advantages"
+            android:key = "advantages"
+            android:entries="@array/subjects"
+            android:entryValues="@array/subjects"
+            ></MultiSelectListPreference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="SignatureCategory"
+        android:title="Signature">
+        <EditTextPreference
+            android:defaultValue="Nothing"
+            android:icon="@mipmap/ic_launcher"
+            android:key="signature"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:summary="Your Signature"
+            android:title="Signature"/>
+    </PreferenceCategory>>
+</PreferenceScreen>

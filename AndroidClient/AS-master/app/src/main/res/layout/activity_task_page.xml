@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskPageActivity">
+    <include
+        layout="@layout/default_toolbar"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/taskRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_alignStart="@+id/bt_post"
+        android:layout_alignLeft="@+id/bt_post"/>
+
+    <Button
+        android:id="@+id/bt_post"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/taskRecyclerview"
+        android:text="POST"
+        android:textStyle="bold"
+        android:background="@color/divide"/>
+</RelativeLayout>

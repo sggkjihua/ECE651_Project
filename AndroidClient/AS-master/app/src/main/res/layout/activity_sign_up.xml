@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/default_toolbar"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/login_dialog"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"/>
+
+    <EditText
+        android:id="@+id/signupname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="UserName"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/signupemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
+        />
+    <EditText
+        android:id="@+id/signuppassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="register"
+        android:text="REGISTER" />
+</LinearLayout>

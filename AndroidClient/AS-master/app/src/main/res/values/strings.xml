@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">EduHelper</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="subjects">
+        <item>ECE</item>
+        <item>CS</item>
+        <item>EE</item>
+        <item>ME</item>
+        <item>MATH</item>
+        <item>CE</item>
+        <item>PE</item>
+        <item>AE</item>
+    </string-array>
+
+    <string-array name="nationalities">
+        <item>China</item>
+        <item>Canada</item>
+        <item>America</item>
+        <item>Japan</item>
+        <item>India</item>
+        <item>Germany</item>
+        <item>France</item>
+        <item>Brazil</item>
+    </string-array>
+
+    <string-array name="degree">
+        <item>Bachelor</item>
+        <item>Master</item>
+        <item>PHD</item>
+    </string-array>
+
+    <string-array name="Schools">
+        <item>Waterloo</item>
+        <item>Toronto</item>
+        <item>Peking</item>
+        <item>Tsinghua</item>
+        <item>Harvard</item>
+        <item>Princeton</item>
+        <item>Vale</item>
+        <item>SHJT</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Unknown</item>
+    </string-array>
+</resources>
