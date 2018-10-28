@@ -76,7 +76,7 @@ public class SignUpActivity extends AppCompatActivity {
         String userName = name.getText().toString();
         String userPassword = password.getText().toString();
         String userEmail = email.getText().toString();
-
+        // TODO Replace check exists users feature with defined return code between sever and client
         if (checkIfExists(userName)){
             Toast.makeText(this,"User Name already exists",Toast.LENGTH_SHORT).show();
         }
