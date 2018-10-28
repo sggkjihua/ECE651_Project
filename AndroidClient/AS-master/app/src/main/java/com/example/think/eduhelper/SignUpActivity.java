@@ -77,28 +77,27 @@ public class SignUpActivity extends AppCompatActivity {
         String userPassword = password.getText().toString();
         String userEmail = email.getText().toString();
         // TODO Replace check exists users feature with defined return code between sever and client
-        if (checkIfExists(userName)){
-            Toast.makeText(this,"User Name already exists",Toast.LENGTH_SHORT).show();
-        }
-        else {
-            if (userName.isEmpty() || userEmail.isEmpty() || userPassword.isEmpty()) {
-                Toast.makeText(this, "Please  complete information", Toast.LENGTH_SHORT).show();
-            } else {
+//        if (checkIfExists(userName)){
+//            Toast.makeText(this,"User Name already exists",Toast.LENGTH_SHORT).show();
+//        }
+//        else {
+//            if (userName.isEmpty() || userEmail.isEmpty() || userPassword.isEmpty()) {
+//                Toast.makeText(this, "Please  complete information", Toast.LENGTH_SHORT).show();
+//            } else {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("userName", userName);
                 params.put("userPassword", userPassword);
                 params.put("userEmail", userEmail);
                 JSONObject parameter = new JSONObject((params));
                 //Start OKHTTP REQUEST
-                HttpHelper.getInstance().postData(parameter);
+                HttpHelper.getInstance().postData(parameter,"register");
                 Toast.makeText(this,"Register successfully! Please login",Toast.LENGTH_SHORT).show();
                 name.setText("");
                 email.setText("");
                 password.setText("");
                 startActivity(new Intent(this,MainActivity.class));
             }
-        }
-    }
+
 
     public Boolean checkIfExists(String name){
         // check if the user name has already been registered
