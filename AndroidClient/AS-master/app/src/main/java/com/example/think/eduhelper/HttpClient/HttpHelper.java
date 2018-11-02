@@ -2,6 +2,9 @@ package com.example.think.eduhelper.HttpClient;
 import android.drm.DrmStore;
 import android.util.Log;
 
+import com.example.think.eduhelper.MainActivity;
+import com.example.think.eduhelper.SignUpActivity;
+
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -30,37 +33,13 @@ public class HttpHelper {
     }
 
     public OkHttpClient Client = new OkHttpClient();
-    // TO DO change the url here
-    private String Url = "https://postman-echo.com/get?foo1=bar1&foo2=bar2'";
 
-//    public void getData(final HttpCallback getCallback) {
-//        Request request = new Request.Builder()
-//                .url(Url)
-//                .build();
-//        Client.newCall(request).enqueue(new Callback() {
-//            @Override
-//            public void onFailure(Call call, IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//            @Override
-//            public void onResponse(Call call, Response response) throws IOException {
-//                try (ResponseBody responseBody = response.body()) {
-//                    if (!response.isSuccessful())
-//                        throw new IOException("Unexpected code " + response);
-//
-//                    String data = responseBody.string();
-//                    getCallback.getDataCallback(data);
-//                }
-//            }
-//        });
-//    }
-    public void postData(JSONObject parameter, String address) {
+    public void postData(JSONObject parameter, String address,final HttpCallback dataBack){
         MediaType JSON = MediaType.parse("application/json; charset=utf-8");
         RequestBody body = RequestBody.create(JSON, parameter.toString());
         //TO DO The URL need to be changed!
         Request request = new Request.Builder()
-                .url("http://192.168.5.4:5000/"+address)
+                .url("http://backend-frank0767.c9users.io/"+address)
                 .post(body)
                 .addHeader("content-type", "application/json; charset=utf-8")
                 .build();
@@ -72,17 +51,15 @@ public class HttpHelper {
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
             }
-
             @Override
             public void onResponse(Call call, final Response response) throws IOException {
                 //Toast.makeText(thisobj,response.body().string()+"Please login",Toast.LENGTH_SHORT).show();
                 if (!response.isSuccessful()) {
                     throw new IOException("Unexpected code" + response.body().string());
                 } else {
-                    Log.d("response",response.body().string());
+                    dataBack.postDataCallback(response.body().string());
                 }
             }
-        });
-        //post end
+        });//post end
     }
 }

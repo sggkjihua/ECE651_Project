@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.think.eduhelper.HttpClient.HttpCallback;
 import com.example.think.eduhelper.HttpClient.HttpHelper;
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +31,6 @@ import java.util.List;
 
 public class LoginDialog extends DialogFragment {
     private EditText name,password;
-
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable final Bundle savedInstanceState) {
@@ -52,7 +53,12 @@ public class LoginDialog extends DialogFragment {
                 params.put("userPassword", userPassword);
                 JSONObject parameter = new JSONObject((params));
                 //Start OKHTTP REQUEST
-                HttpHelper.getInstance().postData(parameter,"login");
+                HttpHelper.getInstance().postData(parameter, "login", new HttpCallback() {
+                    @Override
+                    public void postDataCallback(String Data) {
+                    }
+
+                });
                 name.setText("");
                 password.setText("");
 
