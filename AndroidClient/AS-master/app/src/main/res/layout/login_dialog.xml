@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="sggkjihua"
         android:ems="10"
-        android:hint="UserName"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:layout_marginTop="20dp"/>
 

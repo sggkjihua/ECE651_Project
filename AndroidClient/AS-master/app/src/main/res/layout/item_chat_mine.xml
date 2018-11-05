@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingEnd="@dimen/padding_avg"
+    android:paddingStart="@dimen/padding_avg"
+    android:paddingTop="@dimen/padding_small"
+    >
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/text_chat_message"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/chat_rounded_rect_bg_mine"
+        android:layout_toStartOf="@+id/text_user_alphabet"
+        android:layout_toLeftOf="@+id/text_user_alphabet"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_chat_mine"
+        android:textStyle="normal"
+        android:text="Notice man!!!!"
+        android:textSize="18dp"
+        android:layout_marginStart="@dimen/margin_huge"
+        android:padding="@dimen/padding_small"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/text_user_alphabet"
+        android:background="@drawable/circle_accent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:maxEms="1"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_chat_mine"
+        android:textStyle="bold"
+        android:text="A"
+
+        android:layout_marginStart="@dimen/margin_avg"
+        android:layout_marginLeft="@dimen/margin_avg"
+        />
+
+</RelativeLayout>

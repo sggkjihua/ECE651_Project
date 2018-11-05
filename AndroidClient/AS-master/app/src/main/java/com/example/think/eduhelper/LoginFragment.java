@@ -19,10 +19,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     private Button bt_openLogin;
     private Button bt_openSignup;
 
+
     public LoginFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,11 +47,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.bt_openSignupDialog:
-                //SignUpDialog signUpDialog = new SignUpDialog();
-                //signUpDialog.show(getFragmentManager(),"OpenSignUpDialog");
                 startActivity(new Intent(getContext(), SignUpActivity.class));
                 break;
         }
-
     }
 }

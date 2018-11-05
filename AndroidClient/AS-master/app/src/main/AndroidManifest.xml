@@ -3,14 +3,15 @@
     package="com.example.think.eduhelper">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:networkSecurityConfig="@xml/network_security_config">
+        android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,8 +29,15 @@
         <activity
             android:name=".TaskPageActivity"
             android:parentActivityName=".AccountPage" />
-        <activity android:name=".PostActivity"
-            android:parentActivityName=".TaskPageActivity"></activity>
+        <activity
+            android:name=".PostActivity"
+            android:parentActivityName=".TaskPageActivity" />
+        <activity android:name=".FirebaseChatActivity" />
+        <activity android:name=".Chat.ui.Activities.ChatActivity" />
+        <activity android:name=".ChattingActivity"></activity>
+        <activity android:name="com.example.think.eduhelper.Chat.ui.Activities.SplashActivity"></activity>
+        <activity android:name="com.example.think.eduhelper.Chat.ui.Activities.UserListingActivity"></activity>
+
     </application>
 
 </manifest>

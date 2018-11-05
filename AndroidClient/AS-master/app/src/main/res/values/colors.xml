@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#5ba9f1</color>
-    <color name="colorPrimaryDark">#5f8fe2</color>
+    <color name="colorPrimary">#48b959</color>
+    <color name="colorPrimaryDark">#080808</color>
+
+
     <color name="colorAccent">#D81B60</color>
     <color name="divide">#a3d27d</color>
     <color name="button">#e6d647</color>
+    <color name="bubble_mine">#a1e647</color>
+    <color name="bubble_other">#ffffff</color>
+    <color name="user_name">#737272</color>
+    <color name="red">#e4060d</color>
+
+
+
+
+
+
+    <color name="button_login">#bad64e</color>
+    <color name="bubble_chat_mine">#bfe13f</color>
+    <color name="bubble_chat_other">#fafafa</color>
+    <color name="user_pic_other">#e78652</color>
+    <color name="text_chat_mine">#0a0a09</color>
+    <color name="bubble_border">#0a0a09</color>
+    <color name="bubble_notification">#e41b28</color>
+    <color name="white">#fffdfd</color>
+
+    <color name="button_accepted">#4a8ec6</color>
+    <color name="button_logout">#bf2f36</color>
 
 </resources>

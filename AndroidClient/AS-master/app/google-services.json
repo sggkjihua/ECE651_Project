@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "57537426500",
+    "firebase_url": "https://eduhelper-38104.firebaseio.com",
+    "project_id": "eduhelper-38104",
+    "storage_bucket": "eduhelper-38104.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57537426500:android:6f16b40d741428ee",
+        "android_client_info": {
+          "package_name": "com.example.think.eduhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57537426500-bote13hrlg43n54ebmp9pjqsd8ql3f7o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.think.eduhelper",
+            "certificate_hash": "d6c5d21bb7679e3c118fc535a83cc99780b62a88"
+          }
+        },
+        {
+          "client_id": "57537426500-esh05h06sk0vkr2md18ion2qhpes7lur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQGjOx7Trj_-NlZxRu0JYjTSWDNwmPPbI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57537426500-esh05h06sk0vkr2md18ion2qhpes7lur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
