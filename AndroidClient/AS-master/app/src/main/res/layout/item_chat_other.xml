@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:orientation="horizontal"
@@ -35,13 +35,13 @@
         android:id="@+id/text_chat_message"
         android:background="@drawable/chat_rounded_rect_bg"
         android:layout_marginEnd="@dimen/margin_huge"
-        android:layout_marginRight="50dp"
-        android:textAllCaps="true"
+        android:layout_marginRight="@dimen/margin_huge"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/text_chat_mine"
         android:textStyle="normal"
         android:textSize="16dp"
         android:text="You are not bad man!!!!"
+        android:layout_gravity="center"
         android:padding="@dimen/padding_small"
 
         />

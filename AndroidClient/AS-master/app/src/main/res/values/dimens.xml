@@ -33,5 +33,5 @@
     <dimen name="user_pic_edge">0.5dp</dimen>
     <dimen name="bubble_edge">0.5dp</dimen>
 
-
+    <dimen name="login_space_width">200dp</dimen>
 </resources>
