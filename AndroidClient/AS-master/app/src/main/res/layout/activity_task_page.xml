@@ -6,22 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TaskPageActivity">
-    <include
-        layout="@layout/default_toolbar"/>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/taskRecyclerview"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_post_listing"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="Post" />
+    <FrameLayout
+        android:layout_below="@+id/toolbar_post_listing"
+        android:id="@+id/posts_listing_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_alignStart="@+id/bt_post"
-        android:layout_alignLeft="@+id/bt_post"/>
+        android:layout_alignParentBottom="true"
+        />
 
-    <Button
-        android:id="@+id/bt_post"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bt_add_new_post"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignBottom="@+id/taskRecyclerview"
-        android:text="POST"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_avg"
         android:textStyle="bold"
+        android:src="@drawable/post_button_bg"
         android:background="@color/divide"/>
 </RelativeLayout>

@@ -12,7 +12,7 @@
     <LinearLayout
         android:id="@+id/titleLine"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:orientation="horizontal">
         <EditText
             android:id="@+id/post_course"
@@ -24,10 +24,10 @@
             android:inputType="textPersonName"
             android:textStyle="bold"/>
         <EditText
-            android:id="@+id/post_subtitle"
+            android:id="@+id/post_topic"
             android:hint="Subtitle here"
             android:gravity="center_vertical"
-            android:text="problem with python version"
+            android:text="Algorithm"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPersonName"
@@ -35,17 +35,29 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/post_subtitle"
+        android:hint="Subtitle here"
+        android:text="problem with python version"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="@dimen/margin_avg"
+        android:layout_below="@+id/titleLine"
+        android:inputType="textPersonName"
+        android:textStyle="bold"/>
+
+    <EditText
         android:id="@+id/post_detail"
         android:hint="Detail about your post"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/titleLine"
+        android:layout_below="@+id/post_subtitle"
         android:layout_above="@+id/post_confirm"
         android:inputType="textMultiLine"
         android:gravity="top|left"
         android:paddingHorizontal="@dimen/margin_avg"
         android:text="Confused about the version we use"
         />
+
     <Button
         android:id="@+id/post_confirm"
         android:layout_width="match_parent"

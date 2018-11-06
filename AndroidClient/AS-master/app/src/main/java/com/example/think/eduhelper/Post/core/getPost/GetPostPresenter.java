@@ -20,16 +20,16 @@ public class GetPostPresenter implements GetPostConstractor.Presenter, GetPostCo
 
     @Override
     public void getChatPosts() {
-        mGetPostsInteractor.getChatPostsFromFirebase();
+        mGetPostsInteractor.getAllPostsFromFirebase();
     }
 
     @Override
     public void onGetAllPostsSuccess(List<Post> posts) {
-
+        mView.onGetAllPostsSuccess(posts);
     }
 
     @Override
     public void onGetAllPostsFailure(String message) {
-
+        mView.onGetAllPostsFailure(message);
     }
 }

@@ -28,6 +28,12 @@ public class Post {
     private String content;
     private String uid;
 
+    public String getTopic() {
+        return topic;
+    }
+
+    private String topic;
+
     public long getTimestamp() {
         return timestamp;
     }
@@ -37,12 +43,13 @@ public class Post {
 
     public Post(){}
 
-    public Post(String course, String title, String content, String uid, long timestamp) {
+    public Post(String course, String title, String content, String uid, long timestamp, String topic) {
         this.course = course;
         this.title = title;
         this.content = content;
         this.uid = uid;
         this.timestamp = timestamp;
+        this.topic = topic;
     }
 
 

@@ -2,6 +2,9 @@ package com.example.think.eduhelper;
 
 import android.content.Intent;
 import android.os.PersistableBundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +19,8 @@ import com.example.think.eduhelper.Models.TitleChild;
 import com.example.think.eduhelper.Models.TitleCreator;
 import com.example.think.eduhelper.Models.TitleParent;
 import com.example.think.eduhelper.Post.ui.PostActivity;
+import com.example.think.eduhelper.Post.ui.PostFragment;
+import com.example.think.eduhelper.Post.ui.PostListingFragment;
 import com.example.think.eduhelper.PostDB.PostInfo;
 import com.example.think.eduhelper.UserLoginDB.User;
 
@@ -23,54 +28,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TaskPageActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
     Toolbar toolbar;
-    private Button bt_post;
+    private FloatingActionButton bt_post;
 
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
-        ((TaskAdaptor)recyclerView.getAdapter()).onSaveInstanceState(outState);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_page);
-
-
-        // toolbar and back to home arrow
-        toolbar = findViewById(R.id.default_toolBar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        // recyclerview
-        recyclerView = findViewById(R.id.taskRecyclerview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        TaskAdaptor adaptor = new TaskAdaptor(this, init());
-        adaptor.setExpandCollapseListener(new ExpandableRecyclerAdapter.ExpandCollapseListener() {
-            @Override
-            public void onParentExpanded(int parentPosition) {
-
-            }
-
-            @Override
-            public void onParentCollapsed(int parentPosition) {
-
-            }
-        });
-
-        recyclerView.setAdapter(adaptor);
-        bt_post = findViewById(R.id.bt_post);
-        bt_post.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),PostActivity.class));
-            }
-        });
+        bindViews();
+        init(savedInstanceState);
     }
-    public List<TitleParent> init(){
+    public List<TitleParent> getPosts(){
         List<PostInfo> posts= MainActivity.postDatabase.postDao().getPost();
         List<TitleParent> parents = new ArrayList<>();
         for(PostInfo post:posts){
@@ -83,4 +56,34 @@ public class TaskPageActivity extends AppCompatActivity {
         }
         return parents;
     }
+
+    public void bindViews(){
+        toolbar = findViewById(R.id.toolbar_post_listing);
+        bt_post = findViewById(R.id.bt_add_new_post);
+    }
+
+    public void init(Bundle savedInstanceState){
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        bt_post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),PostActivity.class));
+            }
+        });
+
+        if (findViewById(R.id.posts_listing_container)!=null){
+            if (savedInstanceState!= null){
+                return ;
+            }
+            PostListingFragment postListingFragment = new PostListingFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.posts_listing_container, postListingFragment,null);
+            fragmentTransaction.commit();
+        }
+    }
+
+
 }

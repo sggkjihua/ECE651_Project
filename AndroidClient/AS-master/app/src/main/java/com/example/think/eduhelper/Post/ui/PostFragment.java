@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
  * A simple {@link Fragment} subclass.
  */
 public class PostFragment extends Fragment implements View.OnClickListener, AddPostContractor.View {
-    private EditText course, title, content;
+    private EditText course, title, content, topic;
     private AddPostPresenter mAddPostPresenter;
     private ProgressDialog mProgressDialog;
     private FirebaseUser firebaseUser;
@@ -40,6 +40,7 @@ public class PostFragment extends Fragment implements View.OnClickListener, AddP
         course = view.findViewById(R.id.post_course);
         title = view.findViewById(R.id.post_subtitle);
         content = view.findViewById(R.id.post_detail);
+        topic = view.findViewById(R.id.post_topic);
         bt_post_confirm = view.findViewById(R.id.post_confirm);
     }
 
@@ -57,7 +58,8 @@ public class PostFragment extends Fragment implements View.OnClickListener, AddP
         String post_course = course.getText().toString();
         String post_title = title.getText().toString();
         String post_detail = content.getText().toString();
-        Post post = new Post(post_course, post_title,post_detail, firebaseUser.getUid(),System.currentTimeMillis());
+        String post_topic = topic.getText().toString();
+        Post post = new Post(post_course, post_title,post_detail, firebaseUser.getUid(),System.currentTimeMillis(),post_topic);
         if (post_course.isEmpty() || post_title.isEmpty() || post_detail.isEmpty()) {
             Toast.makeText(getActivity(), "Please complete information", Toast.LENGTH_SHORT).show();
         } else {
