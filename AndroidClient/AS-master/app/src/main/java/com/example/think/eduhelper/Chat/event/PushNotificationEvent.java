@@ -1,8 +1,5 @@
 package com.example.think.eduhelper.Chat.event;
 
-/**
- * Created by delaroy on 4/13/17.
- */
 public class PushNotificationEvent {
     private String title;
     private String message;

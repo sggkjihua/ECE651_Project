@@ -2,11 +2,6 @@ package com.example.think.eduhelper.Chat.core.login;
 
 import android.app.Activity;
 
-/**
- * Author: Kartik Sharma
- * Created on: 8/28/2016 , 11:10 AM
- * Project: FirebaseChat
- */
 
 public class LoginPresenter implements LoginContract.Presenter, LoginContract.OnLoginListener {
     private LoginContract.View mLoginView;

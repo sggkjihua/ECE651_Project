@@ -47,6 +47,8 @@ import org.json.JSONObject;
 import java.util.List;
 
 public class LoginDialog extends DialogFragment {
+
+    // now useless~~~~~~~~
     private EditText name,password;
     private static int SIGN_IN_REQUEST_CODE = 1;
     private ProgressDialog mProgressDialog;

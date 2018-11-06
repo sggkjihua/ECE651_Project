@@ -30,14 +30,18 @@
             android:name=".TaskPageActivity"
             android:parentActivityName=".AccountPage" />
         <activity
-            android:name=".PostActivity"
+            android:name=".Post.ui.PostActivity"
             android:parentActivityName=".TaskPageActivity" />
         <activity android:name=".FirebaseChatActivity" />
-        <activity android:name=".Chat.ui.Activities.ChatActivity" />
-        <activity android:name=".ChattingActivity"></activity>
-        <activity android:name="com.example.think.eduhelper.Chat.ui.Activities.SplashActivity"></activity>
-        <activity android:name="com.example.think.eduhelper.Chat.ui.Activities.UserListingActivity"></activity>
-
+        <activity
+            android:name=".Chat.ui.Activities.ChatActivity"
+            android:parentActivityName=".Chat.ui.Activities.UserListingActivity" />
+        <activity android:name=".ChattingActivity" />
+        <activity android:name=".Chat.ui.Activities.SplashActivity" />
+        <activity
+            android:name=".Chat.ui.Activities.UserListingActivity"
+            android:parentActivityName=".AccountPage" />
+        <activity android:name=".Post.ui.PostListingActivity"></activity>
     </application>
 
 </manifest>

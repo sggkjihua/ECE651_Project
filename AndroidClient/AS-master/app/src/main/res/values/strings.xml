@@ -70,8 +70,10 @@
     <string name="cancel">Cancel</string>
 
 
-
     <string name="login_button">LOGIN</string>
     <string name="signUp_button">New user sign up here</string>
+
+    <string name="post_successfully_added">Post successfully added!</string>
+    <string name="post_unable_to_add">Unable to add post!</string>
 
 </resources>

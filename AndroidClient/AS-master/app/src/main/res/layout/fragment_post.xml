@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Post.ui.PostFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/titleLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/post_course"
+            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:text="ECE650"
+            android:hint="Course"
+            android:inputType="textPersonName"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/post_subtitle"
+            android:hint="Subtitle here"
+            android:gravity="center_vertical"
+            android:text="problem with python version"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/post_detail"
+        android:hint="Detail about your post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleLine"
+        android:layout_above="@+id/post_confirm"
+        android:inputType="textMultiLine"
+        android:gravity="top|left"
+        android:paddingHorizontal="@dimen/margin_avg"
+        android:text="Confused about the version we use"
+        />
+    <Button
+        android:id="@+id/post_confirm"
+        android:layout_width="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="Confirm"
+        android:layout_gravity="bottom"
+        android:background="@color/button"/>
+
+</RelativeLayout>

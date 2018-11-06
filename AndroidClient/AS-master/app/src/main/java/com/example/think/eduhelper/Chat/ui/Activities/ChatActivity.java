@@ -34,11 +34,16 @@ public class ChatActivity extends AppCompatActivity {
     }
     private void bindViews(){
         toolbar = findViewById(R.id.toolbar);
+
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     private void init(){
         toolbar.setTitle(getIntent().getExtras().getString(com.example.think.eduhelper.Chat.utils.Constants.ARG_RECEIVER));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout_content_chat,
                 ChatFragment.newInstance(getIntent().getExtras().getString(com.example.think.eduhelper.Chat.utils.Constants.ARG_RECEIVER),

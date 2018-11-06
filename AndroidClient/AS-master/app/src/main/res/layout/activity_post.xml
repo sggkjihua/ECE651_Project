@@ -7,50 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".PostActivity"
     android:orientation="vertical">
-    <include
-        layout="@layout/default_toolbar" />
-    <LinearLayout
-        android:id="@+id/titleLine"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_post"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_below="@+id/default_toolBar">
-        <EditText
-            android:id="@+id/post_course"
-            android:layout_height="match_parent"
-            android:layout_width="100dp"
-            android:gravity="center"
-            android:text="ECE650"
-            android:hint="Course"
-            android:inputType="textPersonName"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/post_subtitle"
-            android:hint="Subtitle here"
-            android:gravity="center_vertical"
-            android:text="problem with python version"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPersonName"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/post_detail"
-        android:hint="Detail about your post"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="Post" />
+    <FrameLayout
+        android:id="@+id/frame_layout_content_post"
+        android:layout_below="@+id/toolbar_post"
+        android:layout_above="@+id/post_confirm"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/titleLine"
-        android:inputType="textMultiLine"
-        android:gravity="top|left"
-        android:text="Confused about the version we use"
-        />
-    <Button
-        android:id="@+id/post_confirm"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:text="Confirm"
-        android:layout_gravity="bottom"
-        android:background="@color/button"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </FrameLayout>
 </RelativeLayout>

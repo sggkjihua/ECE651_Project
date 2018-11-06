@@ -52,7 +52,8 @@ public class UserListingActivity extends AppCompatActivity{
     private void init() {
         // set the toolbar
         setSupportActionBar(mToolbar);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         // set the view pager adapter
         UserListingPagerAdapter userListingPagerAdapter = new UserListingPagerAdapter(getSupportFragmentManager());
         mViewPagerUserListing.setAdapter(userListingPagerAdapter);
