@@ -24,14 +24,14 @@
             android:name=".ProfileSetting"
             android:parentActivityName=".AccountPage" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".Chat.ui.Activities.SignUpActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".TaskPageActivity"
+            android:name=".Post.ui.PostsListingActivity"
             android:parentActivityName=".AccountPage" />
         <activity
             android:name=".Post.ui.PostActivity"
-            android:parentActivityName=".TaskPageActivity" />
+            android:parentActivityName=".Post.ui.PostsListingActivity" />
         <activity android:name=".FirebaseChatActivity" />
         <activity
             android:name=".Chat.ui.Activities.ChatActivity"
@@ -41,8 +41,6 @@
         <activity
             android:name=".Chat.ui.Activities.UserListingActivity"
             android:parentActivityName=".AccountPage" />
-        <activity android:name=".Post.ui.PostListingActivity"
-            android:parentActivityName=".AccountPage"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.think.eduhelper.ViewHolder;
+package com.example.think.eduhelper.Post.ui.ViewHolder_Posts;
 
 import android.support.annotation.NonNull;
 import android.view.View;

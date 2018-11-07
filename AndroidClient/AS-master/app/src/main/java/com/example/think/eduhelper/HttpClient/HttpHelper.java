@@ -1,26 +1,16 @@
 package com.example.think.eduhelper.HttpClient;
-import android.drm.DrmStore;
-import android.util.Log;
-
-import com.example.think.eduhelper.MainActivity;
-import com.example.think.eduhelper.SignUpActivity;
 
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.sql.ClientInfoStatus;
-import java.util.HashMap;
-import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
 public class HttpHelper {
 

@@ -1,4 +1,4 @@
-package com.example.think.eduhelper.Models;
+package com.example.think.eduhelper.Post.model.ItemView;
 
 public class TitleChild {
 

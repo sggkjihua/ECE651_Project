@@ -1,35 +1,20 @@
-package com.example.think.eduhelper;
+package com.example.think.eduhelper.Post.ui;
 
 import android.content.Intent;
 import android.os.PersistableBundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
-import com.bignerdranch.expandablerecyclerview.ExpandableRecyclerAdapter;
-import com.example.think.eduhelper.Adaptor.TaskAdaptor;
-import com.example.think.eduhelper.Models.TitleChild;
-import com.example.think.eduhelper.Models.TitleCreator;
-import com.example.think.eduhelper.Models.TitleParent;
-import com.example.think.eduhelper.Post.ui.PostActivity;
-import com.example.think.eduhelper.Post.ui.PostFragment;
-import com.example.think.eduhelper.Post.ui.PostListingFragment;
-import com.example.think.eduhelper.PostDB.PostInfo;
-import com.example.think.eduhelper.UserLoginDB.User;
+import com.example.think.eduhelper.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class TaskPageActivity extends AppCompatActivity {
+public class PostsListingActivity extends AppCompatActivity {
     Toolbar toolbar;
-    private FloatingActionButton bt_post;
+    private ImageButton bt_post;
 
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
@@ -42,19 +27,6 @@ public class TaskPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_task_page);
         bindViews();
         init(savedInstanceState);
-    }
-    public List<TitleParent> getPosts(){
-        List<PostInfo> posts= MainActivity.postDatabase.postDao().getPost();
-        List<TitleParent> parents = new ArrayList<>();
-        for(PostInfo post:posts){
-            List<Object>  titleChildren = new ArrayList<>();
-            TitleParent parent = new TitleParent(post.getCourse(),post.getTitle());
-            TitleChild child = new TitleChild(post.getDetail());
-            titleChildren.add(child);
-            parent.setChildrenList(titleChildren);
-            parents.add(parent);
-        }
-        return parents;
     }
 
     public void bindViews(){

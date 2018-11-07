@@ -11,18 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bignerdranch.expandablerecyclerview.ExpandableRecyclerAdapter;
-import com.example.think.eduhelper.Adaptor.TaskAdaptor;
-import com.example.think.eduhelper.Chat.core.users.getall.GetUsersContract;
-import com.example.think.eduhelper.Chat.core.users.getall.GetUsersPresenter;
-import com.example.think.eduhelper.Chat.ui.Adapters.UserListingRecyclerAdapter;
-import com.example.think.eduhelper.Chat.utils.ItemClickSupport;
-import com.example.think.eduhelper.Models.TitleChild;
-import com.example.think.eduhelper.Models.TitleParent;
+
+import com.example.think.eduhelper.Post.model.ItemView.TitleChild;
+import com.example.think.eduhelper.Post.model.ItemView.TitleParent;
 import com.example.think.eduhelper.Post.core.getPost.GetPostConstractor;
 import com.example.think.eduhelper.Post.core.getPost.GetPostPresenter;
 import com.example.think.eduhelper.Post.model.Post;
 import com.example.think.eduhelper.R;
-
+import com.example.think.eduhelper.Post.Adaptor.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +29,7 @@ public class PostListingFragment extends Fragment implements GetPostConstractor.
     private RecyclerView mRecyclerViewAllPostsListing;
     private SwipeRefreshLayout mSwipeRefreshLayout;
 
-    private TaskAdaptor mPostsListingRecyclerAdapter;
+    private PostAdaptor mPostsListingRecyclerAdapter;
 
     private GetPostPresenter mGetPostPresenter;
 
@@ -95,7 +91,7 @@ public class PostListingFragment extends Fragment implements GetPostConstractor.
             parent.setChildrenList(titleChildren);
             parents.add(parent);
         }
-        mPostsListingRecyclerAdapter = new TaskAdaptor(getContext(),parents);
+        mPostsListingRecyclerAdapter = new PostAdaptor(getContext(),parents);
         mPostsListingRecyclerAdapter.setExpandCollapseListener(new ExpandableRecyclerAdapter.ExpandCollapseListener(){
             @Override
             public void onParentExpanded(int parentPosition) {

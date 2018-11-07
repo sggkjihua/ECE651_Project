@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TaskPageActivity">
+    tools:context=".Post.ui.PostsListingActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_post_listing"
         android:layout_width="match_parent"
@@ -21,15 +21,14 @@
         android:layout_alignParentBottom="true"
         />
 
-    <android.support.design.widget.FloatingActionButton
+    <ImageButton
         android:id="@+id/bt_add_new_post"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="@dimen/margin_avg"
-        android:textStyle="bold"
-        android:src="@drawable/post_button_bg"
-        android:background="@color/divide"/>
+        android:src="@drawable/add_button"
+        android:background="@color/fui_transparent"/>
 </RelativeLayout>

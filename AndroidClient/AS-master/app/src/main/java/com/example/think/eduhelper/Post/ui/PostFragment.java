@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,6 @@ import com.example.think.eduhelper.Post.core.addPost.AddPostContractor;
 import com.example.think.eduhelper.Post.core.addPost.AddPostPresenter;
 import com.example.think.eduhelper.Post.model.Post;
 import com.example.think.eduhelper.R;
-import com.example.think.eduhelper.TaskPageActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -95,7 +93,7 @@ public class PostFragment extends Fragment implements View.OnClickListener, AddP
     public void onAddPostSuccess(String message) {
         mProgressDialog.dismiss();
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getContext(), TaskPageActivity.class));
+        startActivity(new Intent(getContext(), PostsListingActivity.class));
     }
 
     @Override

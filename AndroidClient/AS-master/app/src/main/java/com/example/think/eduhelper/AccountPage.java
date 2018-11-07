@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.think.eduhelper.Chat.ui.Activities.SplashActivity;
 import com.example.think.eduhelper.Chat.ui.Activities.UserListingActivity;
+import com.example.think.eduhelper.Post.ui.PostsListingActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class AccountPage extends AppCompatActivity implements View.OnClickListener {
@@ -39,7 +39,7 @@ public class AccountPage extends AppCompatActivity implements View.OnClickListen
                 startActivity(new Intent(this, ProfileSetting.class));
                 break;
             case R.id.bt_seekOrhelp:
-                startActivity(new Intent(this,TaskPageActivity.class));
+                startActivity(new Intent(this,PostsListingActivity.class));
                 break;
             case R.id.bt_missions:
                 startActivity(new Intent(this,UserListingActivity.class));

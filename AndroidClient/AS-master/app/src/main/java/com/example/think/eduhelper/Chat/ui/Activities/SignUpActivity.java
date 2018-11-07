@@ -1,4 +1,4 @@
-package com.example.think.eduhelper;
+package com.example.think.eduhelper.Chat.ui.Activities;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -21,7 +21,7 @@ import com.example.think.eduhelper.Chat.core.users.add.AddUserPresenter;
 import com.example.think.eduhelper.Chat.ui.Activities.UserListingActivity;
 import com.example.think.eduhelper.HttpClient.HttpCallback;
 import com.example.think.eduhelper.HttpClient.HttpHelper;
-import com.example.think.eduhelper.UserLoginDB.User;
+import com.example.think.eduhelper.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
