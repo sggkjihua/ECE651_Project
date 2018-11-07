@@ -1,4 +1,4 @@
-package com.example.think.eduhelper.Chat.core.login;
+package com.example.think.eduhelper.LoginRegister.core.login;
 
 import android.app.Activity;
 

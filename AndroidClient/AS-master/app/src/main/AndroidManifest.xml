@@ -24,7 +24,7 @@
             android:name=".ProfileSetting"
             android:parentActivityName=".AccountPage" />
         <activity
-            android:name=".Chat.ui.Activities.SignUpActivity"
+            android:name=".LoginRegister.ui.SignUpActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Post.ui.PostsListingActivity"

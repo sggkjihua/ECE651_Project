@@ -1,4 +1,4 @@
-package com.example.think.eduhelper.Chat.core.registration;
+package com.example.think.eduhelper.LoginRegister.core.registration;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;

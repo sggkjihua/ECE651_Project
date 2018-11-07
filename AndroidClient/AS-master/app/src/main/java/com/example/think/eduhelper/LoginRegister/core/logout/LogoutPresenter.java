@@ -1,4 +1,4 @@
-package com.example.think.eduhelper.Chat.core.logout;
+package com.example.think.eduhelper.LoginRegister.core.logout;
 
 
 

@@ -1,4 +1,4 @@
-package com.example.think.eduhelper;
+package com.example.think.eduhelper.LoginRegister.ui;
 
 
 import android.app.ProgressDialog;
@@ -12,9 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.think.eduhelper.Chat.core.login.LoginContract;
-import com.example.think.eduhelper.Chat.core.login.LoginPresenter;
-import com.example.think.eduhelper.Chat.ui.Activities.SignUpActivity;
+import com.example.think.eduhelper.AccountPage;
+import com.example.think.eduhelper.LoginRegister.core.login.LoginContract;
+import com.example.think.eduhelper.LoginRegister.core.login.LoginPresenter;
+import com.example.think.eduhelper.LoginRegister.ui.SignUpActivity;
+import com.example.think.eduhelper.R;
 
 
 /**
@@ -25,7 +27,6 @@ public class LoginFragment extends Fragment implements View.OnClickListener,Logi
     private Button bt_openSignup;
     private LoginPresenter mLoginPresenter;
     private EditText email,password;
-    private static int SIGN_IN_REQUEST_CODE = 1;
     private ProgressDialog mProgressDialog;
 
 

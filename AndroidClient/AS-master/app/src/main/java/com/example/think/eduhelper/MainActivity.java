@@ -1,11 +1,11 @@
 package com.example.think.eduhelper;
 
-import android.arch.persistence.room.Room;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+
+import com.example.think.eduhelper.LoginRegister.ui.LoginFragment;
 
 public class MainActivity extends AppCompatActivity {
     @Override
